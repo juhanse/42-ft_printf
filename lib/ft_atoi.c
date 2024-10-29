@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
+/*   By: julienhanse <julienhanse@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 17:26:20 by juhanse           #+#    #+#             */
-/*   Updated: 2024/10/29 17:27:04 by juhanse          ###   ########.fr       */
+/*   Updated: 2024/10/30 00:38:03 by julienhanse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	ft_overflow(long sign)
 	return (0);
 }
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *s)
 {
 	int		i;
 	long	sign;
@@ -29,15 +29,15 @@ int	ft_atoi(const char *str)
 	i = 0;
 	sign = 1;
 	result = 0;
-	while (str[i] == 32 || (str[i] >= 9 && str[i] <= 13))
+	while (s[i] == 32 || (s[i] >= 9 && s[i] <= 13))
 		i++;
-	if (str[i] == '+' || str[i] == '-')
-		if (str[i++] == '-')
+	if (s[i] == '+' || s[i] == '-')
+		if (s[i++] == '-')
 			sign = -1;
-	while (str[i] >= '0' && str[i] <= '9')
+	while (s[i] >= '0' && s[i] <= '9')
 	{
 		tmp = result;
-		result = (result * 10) + (str[i] - 48);
+		result = (result * 10) + (s[i] - 48);
 		if (tmp > result)
 			return (ft_overflow(sign));
 		i++;
