@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: julienhanse <julienhanse@student.42.fr>    +#+  +:+       +#+        */
+/*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 17:19:15 by juhanse           #+#    #+#             */
-/*   Updated: 2024/10/30 00:38:13 by julienhanse      ###   ########.fr       */
+/*   Updated: 2024/10/30 18:27:18 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include <stdio.h>
+# include <stdio.h> // REMOVE
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
@@ -28,5 +28,7 @@ char	*ft_strdup(const char *src);
 int		ft_atoi(const char *s);
 char	*ft_itoa(int n);
 void	ft_putnbr(int n);
+
+int	ft_printf(const char *, ...);
 
 #endif
