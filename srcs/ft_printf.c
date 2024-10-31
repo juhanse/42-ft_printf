@@ -6,7 +6,7 @@
 /*   By: julienhanse <julienhanse@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:16:23 by juhanse           #+#    #+#             */
-/*   Updated: 2024/10/31 23:17:41 by julienhanse      ###   ########.fr       */
+/*   Updated: 2024/10/31 23:19:30 by julienhanse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,6 @@ int	ft_printf(const char *s, ...)
 
 int	main(void)
 {
-	printf("Hello %s and %d - %c | %%", "world!", 18, 'z');
+	printf("Hello %s | %d - %c | %%", "world!", 20, 'z');
 	return (0);
 }
