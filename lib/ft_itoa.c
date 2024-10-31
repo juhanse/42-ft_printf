@@ -6,11 +6,11 @@
 /*   By: julienhanse <julienhanse@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 17:26:35 by juhanse           #+#    #+#             */
-/*   Updated: 2024/10/30 00:39:11 by julienhanse      ###   ########.fr       */
+/*   Updated: 2024/10/31 21:49:45 by julienhanse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "../include/ft_printf.h"
 
 static size_t	ft_count_digit(int n)
 {

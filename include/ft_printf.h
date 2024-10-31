@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
+/*   By: julienhanse <julienhanse@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 17:19:15 by juhanse           #+#    #+#             */
-/*   Updated: 2024/10/31 13:43:57 by juhanse          ###   ########.fr       */
+/*   Updated: 2024/10/31 22:02:47 by julienhanse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,12 @@
 # include <stdarg.h>
 
 size_t	ft_strlen(const char *s);
-void	ft_putstr(char *s);
-void	ft_putchar(char c);
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
-char	*ft_strdup(const char *src);
-
-int		ft_atoi(const char *s);
-char	*ft_itoa(int n);
-void	ft_putnbr(int n);
+void	ft_putstr(char *s, int *count);
+void	ft_putchar(char c, int *count);
+void	ft_putnbr(int n, int *count);
 
 int		ft_printf(const char *s, ...);
+int		ft_is_convertible(char c);
+void	ft_convert(char c, va_list args, int *count);
 
 #endif

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+         #
+#    By: julienhanse <julienhanse@student.42.fr>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/29 17:16:52 by juhanse           #+#    #+#              #
-#    Updated: 2024/10/31 13:42:51 by juhanse          ###   ########.fr        #
+#    Updated: 2024/10/31 21:51:47 by julienhanse      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,8 @@ CC = cc
 CFLAGS = -Wall -Werror -Wextra
 
 LIB = lib/ft_strlen.c lib/ft_putstr.c lib/ft_putchar.c lib/ft_strlcpy.c lib/ft_strlcat.c lib/ft_strdup.c lib/ft_atoi.c lib/ft_itoa.c lib/ft_putnbr.c 
-SRCS = srcs/main.c
-HEADERS = ft_printf.h
+SRCS = srcs/ft_printf.c srcs/ft_convert.c
+HEADERS = include/ft_printf.h
 
 OBJS = $(SRCS:.c=.o)
 

@@ -3,50 +3,41 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
+/*   By: julienhanse <julienhanse@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:16:23 by juhanse           #+#    #+#             */
-/*   Updated: 2024/10/31 16:37:15 by juhanse          ###   ########.fr       */
+/*   Updated: 2024/10/31 22:11:28 by julienhanse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
-
-int	ft_parse(va_list c)
-{
-	if (c == 's')
-	{
-		ft_convert(c);
-		return (1);
-	}
-	else if (c == 'c')
-	{
-		ft_convert(c);
-		return (1);
-	}
-	else if (c == 'd')
-	{
-		ft_convert(c);
-		return (1);
-	}
-	return (0);
-}
+#include "../include/ft_printf.h"
 
 int	ft_printf(const char *s, ...)
 {
+	int		res;
 	size_t	i;
 	va_list	args;
 
 	if (!s)
 		return (0);
-	i = 0;
+	i = -1;
+	res = 0;
 	va_start(args, s);
-	while (args)
+	while (s[++i])
 	{
-		if (args[i] == '%' && args[i + 1])
-			return (ft_parse(args[i]));
-		i++;
+		if (s[i] == '%' && ft_is_convertible(s[i + 1]))
+			ft_convert(s[++i], args, &res);
+		else if (s[i] == '%' && !ft_is_convertible(s[i + 1]))
+			i++;
+		else
+			write(1, &s[i], 1);
 	}
 	va_end(args);
+	return (res);
+}
+
+int	main(void)
+{
+	ft_printf("Hello %s", "world!");
 	return (0);
 }
