@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_memory.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: julienhanse <julienhanse@student.42.fr>    +#+  +:+       +#+        */
+/*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 23:13:49 by julienhanse       #+#    #+#             */
-/*   Updated: 2024/10/31 23:14:37 by julienhanse      ###   ########.fr       */
+/*   Updated: 2024/10/31 23:22:15 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

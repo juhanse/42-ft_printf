@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: julienhanse <julienhanse@student.42.fr>    +#+  +:+       +#+        */
+/*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 23:10:30 by julienhanse       #+#    #+#             */
-/*   Updated: 2024/10/31 23:13:08 by julienhanse      ###   ########.fr       */
+/*   Updated: 2024/10/31 23:22:12 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: julienhanse <julienhanse@student.42.fr>    +#+  +:+       +#+         #
+#    By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/29 17:16:52 by juhanse           #+#    #+#              #
-#    Updated: 2024/10/31 21:51:47 by julienhanse      ###   ########.fr        #
+#    Updated: 2024/10/31 23:22:18 by juhanse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
