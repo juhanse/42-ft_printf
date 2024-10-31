@@ -1,43 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julienhanse <julienhanse@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 16:16:23 by juhanse           #+#    #+#             */
-/*   Updated: 2024/10/31 23:17:41 by julienhanse      ###   ########.fr       */
+/*   Created: 2024/10/31 23:10:30 by julienhanse       #+#    #+#             */
+/*   Updated: 2024/10/31 23:13:08 by julienhanse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
 
-int	ft_printf(const char *s, ...)
+static void	ft_putchar_base(int n, char *base, int *count)
 {
-	int		res;
-	size_t	i;
-	va_list	args;
-
-	if (!s)
-		return (0);
-	i = -1;
-	res = 0;
-	va_start(args, s);
-	while (s[++i])
-	{
-		if (s[i] == '%' && ft_is_convertible(s[i + 1]))
-			ft_convert(s[++i], args, &res);
-		else if (s[i] == '%' && !ft_is_convertible(s[i + 1]))
-			i++;
-		else
-			write(1, &s[i], 1);
-	}
-	va_end(args);
-	return (res);
+	write(1, &base[n], 1);
+	*count += 1;
 }
 
-int	main(void)
+void	ft_putnbr_base(int n, int sign, char *base_set, int *count)
 {
-	printf("Hello %s and %d - %c | %%", "world!", 18, 'z');
-	return (0);
+	unsigned int	un;
+	unsigned int	len;
+
+	un = n;
+	len = ft_strlen(base_set);
+	if (n < 0 && sign)
+	{
+		un = -n;
+		ft_putchar('-', count);
+	}
+	if (un > len - 1)
+		ft_putnbr_base(un / len, sign, base_set, count);
+	ft_putchar_base((un % len), base_set, count);
 }

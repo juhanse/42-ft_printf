@@ -6,7 +6,7 @@
 /*   By: julienhanse <julienhanse@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 18:24:10 by juhanse           #+#    #+#             */
-/*   Updated: 2024/10/31 21:59:35 by julienhanse      ###   ########.fr       */
+/*   Updated: 2024/10/31 23:17:06 by julienhanse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_is_convertible(char c)
 	char	*convertible;
 
 	i = -1;
-	convertible = "cspdiuxX%";
+	convertible = CONVERTIBLE;
 	while (convertible[++i])
 		if (c == convertible[i])
 			return (1);
@@ -33,4 +33,14 @@ void	ft_convert(char c, va_list args, int *count)
 		ft_putstr(va_arg(args, void *), count);
 	else if (c == '%')
 		ft_putchar('%', count);
+	else if (c == 'p')
+		ft_print_address(va_arg(args, void *), count);
+	else if (c == 'd' || c == 'i')
+		ft_putnbr_base(va_arg(args, int), SIGNED, DECIMAL, count);
+	else if (c == 'u')
+		ft_putnbr_base(va_arg(args, int), UNSIGNED, DECIMAL, count);
+	else if (c == 'x')
+		ft_putnbr_base(va_arg(args, int), UNSIGNED, LOW_HEXADECIMAL, count);
+	else if (c == 'X')
+		ft_putnbr_base(va_arg(args, int), UNSIGNED, UP_HEXADECIMAL, count);
 }

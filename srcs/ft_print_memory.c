@@ -1,43 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_print_memory.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: julienhanse <julienhanse@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 16:16:23 by juhanse           #+#    #+#             */
-/*   Updated: 2024/10/31 23:17:41 by julienhanse      ###   ########.fr       */
+/*   Created: 2024/10/31 23:13:49 by julienhanse       #+#    #+#             */
+/*   Updated: 2024/10/31 23:14:37 by julienhanse      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
 
-int	ft_printf(const char *s, ...)
+static void	ft_putchar_mem(int nbr, char *base, int *count)
 {
-	int		res;
-	size_t	i;
-	va_list	args;
-
-	if (!s)
-		return (0);
-	i = -1;
-	res = 0;
-	va_start(args, s);
-	while (s[++i])
-	{
-		if (s[i] == '%' && ft_is_convertible(s[i + 1]))
-			ft_convert(s[++i], args, &res);
-		else if (s[i] == '%' && !ft_is_convertible(s[i + 1]))
-			i++;
-		else
-			write(1, &s[i], 1);
-	}
-	va_end(args);
-	return (res);
+	write(1, &base[nbr], 1);
+	*count += 1;
 }
 
-int	main(void)
+static void	ft_putmem(unsigned long nbr, int *count)
 {
-	printf("Hello %s and %d - %c | %%", "world!", 18, 'z');
-	return (0);
+	if (nbr > 15)
+		ft_putmem(nbr / 16, count);
+	ft_putchar_mem((nbr % 16), "0123456789abcdef", count);
+}
+
+void	ft_print_address(void *add, int *count)
+{
+	unsigned long	hex;
+
+	hex = (unsigned long)add;
+	ft_putstr("0x", count);
+	ft_putmem(hex, count);
 }
