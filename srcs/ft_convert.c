@@ -6,8 +6,13 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 18:24:10 by juhanse           #+#    #+#             */
-/*   Updated: 2024/10/31 16:24:12 by juhanse          ###   ########.fr       */
+/*   Updated: 2024/10/31 16:33:40 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
+
+int	ft_convert(void *p)
+{
+	return (0);
+}
