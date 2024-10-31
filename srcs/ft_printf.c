@@ -1,13 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_decimal.c                                :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/30 18:26:34 by juhanse           #+#    #+#             */
-/*   Updated: 2024/10/30 18:26:37 by juhanse          ###   ########.fr       */
+/*   Created: 2024/10/31 16:16:23 by juhanse           #+#    #+#             */
+/*   Updated: 2024/10/31 16:23:55 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+int	ft_printf(const char *s, ...)
+{
+	size_t	i;
+	va_list	args;
+
+	if (!s)
+		return (0);
+	i = 0;
+	va_start(args, s);
+	while (args)
+	{
+		if (args[i] == '%' && args[i + 1])
+			ft_parse(args[i]);
+		i++;
+	}
+	va_end(args);
+	return (1);
+}

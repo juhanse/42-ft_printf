@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 17:19:15 by juhanse           #+#    #+#             */
-/*   Updated: 2024/10/30 18:27:18 by juhanse          ###   ########.fr       */
+/*   Updated: 2024/10/31 13:43:57 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ int		ft_atoi(const char *s);
 char	*ft_itoa(int n);
 void	ft_putnbr(int n);
 
-int	ft_printf(const char *, ...);
+int		ft_printf(const char *s, ...);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/29 17:16:52 by juhanse           #+#    #+#              #
-#    Updated: 2024/10/29 17:39:59 by juhanse          ###   ########.fr        #
+#    Updated: 2024/10/31 13:42:51 by juhanse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,19 +18,18 @@ LIB = lib/ft_strlen.c lib/ft_putstr.c lib/ft_putchar.c lib/ft_strlcpy.c lib/ft_s
 SRCS = srcs/main.c
 HEADERS = ft_printf.h
 
-OBJS_LIB = $(LIB:.c=.o)
-OBJS_SRCS = $(SRCS:.c=.o)
+OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS_LIB) $(OBJS_SRCS)
-	ar -rsc $(NAME) $(OBJS_LIB) $(OBJS_SRCS)
+$(NAME): $(OBJS) $(HEADERS)
+	ar -rsc $(NAME) $(OBJS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS_LIB) $(OBJS_SRCS)
+	rm -f $(OBJS)
 
 fclean: clean
 	rm -f $(NAME)
