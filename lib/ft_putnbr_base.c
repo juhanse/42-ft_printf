@@ -6,31 +6,31 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 23:10:30 by julienhanse       #+#    #+#             */
-/*   Updated: 2024/10/31 23:22:12 by juhanse          ###   ########.fr       */
+/*   Updated: 2024/11/01 22:36:00 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
 
-static void	ft_putchar_base(int n, char *base, int *count)
+static void	ft_putchar_base(int nbr, char *base, int *count)
 {
-	write(1, &base[n], 1);
+	write(1, &base[nbr], 1);
 	*count += 1;
 }
 
-void	ft_putnbr_base(int n, int sign, char *base_set, int *count)
+void	ft_putnbr_base(int nbr, int sign, char *base_set, int *count)
 {
+	unsigned int	size;
 	unsigned int	un;
-	unsigned int	len;
 
-	un = n;
-	len = ft_strlen(base_set);
-	if (n < 0 && sign)
+	un = nbr;
+	size = ft_strlen(base_set);
+	if (sign && nbr < 0)
 	{
-		un = -n;
+		un = -nbr;
 		ft_putchar('-', count);
 	}
-	if (un > len - 1)
-		ft_putnbr_base(un / len, sign, base_set, count);
-	ft_putchar_base((un % len), base_set, count);
+	if (un > size - 1)
+		ft_putnbr_base(un / size, sign, base_set, count);
+	ft_putchar_base((un % size), base_set, count);
 }

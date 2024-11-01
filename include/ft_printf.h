@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 17:19:15 by juhanse           #+#    #+#             */
-/*   Updated: 2024/10/31 23:22:08 by juhanse          ###   ########.fr       */
+/*   Updated: 2024/11/01 23:18:35 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@
 size_t	ft_strlen(const char *s);
 void	ft_putstr(char *s, int *count);
 void	ft_putchar(char c, int *count);
-void	ft_putnbr(int n, int *count);
 void	ft_putnbr_base(int n, int sign, char *base_set, int *count);
 
 int		ft_is_convertible(char c);

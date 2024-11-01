@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 18:24:10 by juhanse           #+#    #+#             */
-/*   Updated: 2024/10/31 23:22:15 by juhanse          ###   ########.fr       */
+/*   Updated: 2024/11/01 22:39:27 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,6 @@ void	ft_convert(char c, va_list args, int *count)
 		ft_putchar(va_arg(args, int), count);
 	else if (c == 's')
 		ft_putstr(va_arg(args, void *), count);
-	else if (c == '%')
-		ft_putchar('%', count);
 	else if (c == 'p')
 		ft_print_address(va_arg(args, void *), count);
 	else if (c == 'd' || c == 'i')
@@ -43,4 +41,6 @@ void	ft_convert(char c, va_list args, int *count)
 		ft_putnbr_base(va_arg(args, int), UNSIGNED, LOW_HEXADECIMAL, count);
 	else if (c == 'X')
 		ft_putnbr_base(va_arg(args, int), UNSIGNED, UP_HEXADECIMAL, count);
+	else if (c == '%')
+		ft_putchar('%', count);
 }
