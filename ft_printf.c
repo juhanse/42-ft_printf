@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:16:23 by juhanse           #+#    #+#             */
-/*   Updated: 2024/11/02 12:01:50 by juhanse          ###   ########.fr       */
+/*   Updated: 2024/11/02 12:07:36 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,12 @@ int	ft_printf(const char *s, ...)
 	}
 	va_end(args);
 	return (count);
+}
+
+#include <stdio.h>
+int	main(void)
+{
+	printf("Hello %s !\n", NULL);
+	ft_printf("Hello %s !", NULL);
+	return (0);
 }
