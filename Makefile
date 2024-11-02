@@ -6,7 +6,7 @@
 #    By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/29 17:16:52 by juhanse           #+#    #+#              #
-#    Updated: 2024/11/02 11:57:52 by juhanse          ###   ########.fr        #
+#    Updated: 2024/11/02 12:01:31 by juhanse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,12 +18,14 @@ PATH_LIB = lib/
 PATH_SRCS = srcs/
 
 LIB = ft_strlen.c ft_putstr.c ft_putchar.c ft_putnbr_base.c
-SRCS = ft_printf.c ft_convert.c ft_print_memory.c
+SRCS = ft_convert.c ft_print_memory.c
 HEADERS = ft_printf.h
+MAIN_FILE = ft_printf.c
 
 LIB_OBJS = $(addprefix $(PATH_LIB), $(LIB:.c=.o))
 SRCS_OBJS = $(addprefix $(PATH_SRCS), $(SRCS:.c=.o))
-OBJS = $(LIB_OBJS) $(SRCS_OBJS)
+MAIN_OBJECT = $(MAIN_FILE:.c=.o)
+OBJS = $(LIB_OBJS) $(SRCS_OBJS) $(MAIN_OBJECT)
 
 all: $(NAME)
 

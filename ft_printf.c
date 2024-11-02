@@ -6,11 +6,11 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:16:23 by juhanse           #+#    #+#             */
-/*   Updated: 2024/11/02 11:50:09 by juhanse          ###   ########.fr       */
+/*   Updated: 2024/11/02 12:01:50 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_printf(const char *s, ...)
 {
