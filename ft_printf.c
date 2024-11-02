@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:16:23 by juhanse           #+#    #+#             */
-/*   Updated: 2024/11/02 12:07:36 by juhanse          ###   ########.fr       */
+/*   Updated: 2024/11/02 15:43:53 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,9 @@ int	ft_printf(const char *s, ...)
 #include <stdio.h>
 int	main(void)
 {
-	printf("Hello %s !\n", NULL);
-	ft_printf("Hello %s !", NULL);
+	void	*p;
+
+	printf("%d\n", printf("%c | %s | %p | %d | %i | %u | %x | %X | %%\n", 'a', "test", &p, -42, -122, 122, 12, 12));
+	printf("%d\n", ft_printf("%c | %s | %p | %d | %i | %u | %x | %X | %%\n", 'a', "test", &p, -42, -122, 122, 12, 12));
 	return (0);
 }
