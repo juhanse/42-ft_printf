@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 17:19:15 by juhanse           #+#    #+#             */
-/*   Updated: 2024/11/01 23:18:35 by juhanse          ###   ########.fr       */
+/*   Updated: 2024/11/02 11:45:02 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdarg.h>
-
-# define CONVERTIBLE "cspdiuxX%"
-# define DECIMAL "0123456789"
-# define UP_HEXADECIMAL "0123456789ABCDEF"
-# define LOW_HEXADECIMAL "0123456789abcdef"
-# define SIGNED 1
-# define UNSIGNED 0
 
 size_t	ft_strlen(const char *s);
 void	ft_putstr(char *s, int *count);
