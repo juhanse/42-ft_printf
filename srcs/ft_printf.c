@@ -6,11 +6,11 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:16:23 by juhanse           #+#    #+#             */
-/*   Updated: 2024/11/01 23:16:59 by juhanse          ###   ########.fr       */
+/*   Updated: 2024/11/02 11:50:09 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "../ft_printf.h"
 
 int	ft_printf(const char *s, ...)
 {
@@ -34,10 +34,4 @@ int	ft_printf(const char *s, ...)
 	}
 	va_end(args);
 	return (count);
-}
-
-int	main(void)
-{
-	ft_printf("Hello %s | %d - %c | %%", "world!", 8, 'z');
-	return (0);
 }

@@ -6,11 +6,11 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 23:13:49 by julienhanse       #+#    #+#             */
-/*   Updated: 2024/11/01 22:40:18 by juhanse          ###   ########.fr       */
+/*   Updated: 2024/11/02 11:50:13 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "../ft_printf.h"
 
 static void	ft_putchar_mem(int nbr, char *base, int *count)
 {

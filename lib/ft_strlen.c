@@ -6,11 +6,11 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 17:28:25 by juhanse           #+#    #+#             */
-/*   Updated: 2024/10/31 23:22:14 by juhanse          ###   ########.fr       */
+/*   Updated: 2024/11/02 11:50:17 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "../ft_printf.h"
 
 size_t	ft_strlen(const char *s)
 {

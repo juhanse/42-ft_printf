@@ -6,11 +6,11 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 18:24:10 by juhanse           #+#    #+#             */
-/*   Updated: 2024/11/02 11:44:54 by juhanse          ###   ########.fr       */
+/*   Updated: 2024/11/02 11:50:15 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "../ft_printf.h"
 
 int	ft_is_convertible(char c)
 {

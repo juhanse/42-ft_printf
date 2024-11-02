@@ -6,11 +6,11 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 17:30:26 by juhanse           #+#    #+#             */
-/*   Updated: 2024/10/31 23:22:13 by juhanse          ###   ########.fr       */
+/*   Updated: 2024/11/02 11:50:18 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/ft_printf.h"
+#include "../ft_printf.h"
 
 void	ft_putstr(char *s, int *count)
 {
