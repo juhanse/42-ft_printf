@@ -35,13 +35,3 @@ int	ft_printf(const char *s, ...)
 	va_end(args);
 	return (count);
 }
-
-#include <stdio.h>
-int	main(void)
-{
-	void	*p;
-
-	printf("%d\n", printf("%c | %s | %p | %d | %i | %u | %x | %X | %%\n", 'a', "test", &p, -42, 0X42, 42, 42, 42));
-	ft_printf("%d\n", ft_printf("%c | %s | %p | %d | %i | %u | %x | %X | %%\n", 'a', "test", &p, -42, 0X42, 42, 42, 42));
-	return (0);
-}
