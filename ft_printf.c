@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 16:16:23 by juhanse           #+#    #+#             */
-/*   Updated: 2024/11/02 15:43:53 by juhanse          ###   ########.fr       */
+/*   Updated: 2024/11/06 11:54:39 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,10 @@ int	main(void)
 {
 	void	*p;
 
-	printf("%d\n", printf("%c | %s | %p | %d | %i | %u | %x | %X | %%\n", 'a', "test", &p, -42, -122, 122, 12, 12));
+	printf("%d\n", printf(" NULL %s NULL \n", NULL));
+	printf("%d\n", ft_printf(" NULL %s NULL \n", NULL));
+
+	printf("%d\n", printf("\n%c | %s | %p | %d | %i | %u | %x | %X | %%\n", 'a', "test", &p, -42, -122, 122, 12, 12));
 	printf("%d\n", ft_printf("%c | %s | %p | %d | %i | %u | %x | %X | %%\n", 'a', "test", &p, -42, -122, 122, 12, 12));
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 17:30:26 by juhanse           #+#    #+#             */
-/*   Updated: 2024/11/02 12:08:06 by juhanse          ###   ########.fr       */
+/*   Updated: 2024/11/06 11:54:07 by juhanse          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void	ft_putstr(char *s, int *count)
 	if (!s)
 	{
 		write(1, "(null)", 6);
+		*count += 6;
 		return ;
 	}
 	while (s[i])
