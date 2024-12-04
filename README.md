@@ -1,7 +1,6 @@
-# ft_printf
+# ft_printf ✅
 
 Welcome to **ft_printf**, a project where I recreated the famous `printf` function in C.  
-This project was developed to enhance my understanding of C programming and the inner workings of formatted output functions.
 
 ## Features
 
@@ -17,3 +16,7 @@ The **ft_printf** function supports the following features:
   - `%%` : to print `%`  
 
 - Handling of precision and width for supported conversions.
+
+## Disclaimer
+This project is for educational purposes only. Its goal is to help understand the mechanics of printf. 
+It is not intended to be copied or used in production. Learn, don’t cheat! ❌
