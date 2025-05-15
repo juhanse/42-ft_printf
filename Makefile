@@ -6,40 +6,45 @@
 #    By: juhanse <juhanse@student.s19.be>           +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/29 17:16:52 by juhanse           #+#    #+#              #
-#    Updated: 2024/11/02 12:01:31 by juhanse          ###   ########.fr        #
+#    Updated: 2025/05/16 01:34:31 by juhanse          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
+RM = rm -rf
 
-PATH_LIB = lib/
-PATH_SRCS = srcs/
+COLOUR_GREEN=\033[0;32m
+COLOUR_RED=\033[0;31m
+COLOUR_BLUE=\033[0;34m
+COLOUR_END=\033[0m
 
-LIB = ft_strlen.c ft_putstr.c ft_putchar.c ft_putnbr_base.c
-SRCS = ft_convert.c ft_print_memory.c
-HEADERS = ft_printf.h
-MAIN_FILE = ft_printf.c
+OBJDIR = objs/
 
-LIB_OBJS = $(addprefix $(PATH_LIB), $(LIB:.c=.o))
-SRCS_OBJS = $(addprefix $(PATH_SRCS), $(SRCS:.c=.o))
-MAIN_OBJECT = $(MAIN_FILE:.c=.o)
-OBJS = $(LIB_OBJS) $(SRCS_OBJS) $(MAIN_OBJECT)
+LIB = lib/ft_strlen.c lib/ft_putstr.c lib/ft_putchar.c lib/ft_putnbr_base.c
+SRCS = srcs/ft_convert.c srcs/ft_print_memory.c
+FILES = ft_printf.c $(SRCS) $(LIB)
+
+OBJS = $(addprefix $(OBJDIR), $(FILES:.c=.o))
 
 all: $(NAME)
 
-$(NAME): $(OBJS) $(HEADERS)
+$(NAME): $(OBJS)
 	ar -rsc $(NAME) $(OBJS)
+	@echo "$(COLOUR_GREEN)Compiled ✅$(COLOUR_END)"
 
-%.o: %.c $(HEADERS)
+$(OBJDIR)%.o : %.c
+	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS)
+	$(RM) $(OBJDIR)
+	@echo "$(COLOUR_RED)Cleaned 🧹$(COLOUR_END)"
 
 fclean: clean
-	rm -f $(NAME)
+	$(RM) $(NAME)
+	@echo "$(COLOUR_RED)Cleaned all 🧹$(COLOUR_END)"
 
 re: fclean all
 
